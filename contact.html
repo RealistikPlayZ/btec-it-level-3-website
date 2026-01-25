@@ -55,30 +55,86 @@
 
   <div class="contact-left">
 
-    <form class="contact-form">
-      <div class="row">
-        <label>Name</label>
-        <input type="text" placeholder="Enter your full name..." required />
-      </div>
-
-      <div class="row">
-        <label>Email Address</label>
-        <input type="email" placeholder="Enter your email address..." required />
-      </div>
-
-      <div class="row">
-        <label>Subject</label>
-        <input type="text" placeholder="Enter your subject..." required />
-      </div>
-
-      <div class="row">
-        <label>Message</label>
-        <textarea placeholder="Enter your message..." required></textarea>
-      </div>
-
-      <button type="submit" class="send-btn">SEND</button>
-    </form>
+<form class="contact-form" id="contact-form">
+  <div class="row">
+    <label>Name</label>
+    <input
+      type="text"
+      name="from_name"
+      placeholder="Enter your full name..."
+      required
+    />
   </div>
+
+  <div class="row">
+    <label>Email Address</label>
+    <input
+      type="email"
+      name="from_email"
+      placeholder="Enter your email address..."
+      required
+    />
+  </div>
+
+  <div class="row">
+    <label>Subject</label>
+    <input
+      type="text"
+      name="subject"
+      placeholder="Enter your subject..."
+      required
+    />
+  </div>
+
+  <div class="row">
+    <label>Message</label>
+    <textarea
+      name="message"
+      placeholder="Enter your message..."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="send-btn">SEND</button>
+</form>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("-krAwgGdjrg_qtWsr");
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Owner POV
+    emailjs.sendForm(
+      "service_01x63pj",
+      "template_74qz7sc",
+      this
+    );
+
+    // User POV
+    emailjs.sendForm(
+      "service_01x63pj",
+      "template_ro420sc",
+      this
+    ).then(
+      function () {
+        alert("Message sent successfully!");
+      },
+      function (error) {
+        alert("Failed to send message. Please try again.");
+        console.error(error);
+      }
+    );
+
+    // Reset the form after sending
+    e.target.reset();
+  });
+</script>
 
   <div class="contact-right">
     <h2 class="location-title">Location</h2>
@@ -142,4 +198,3 @@
 </body>
 
 </html>
-

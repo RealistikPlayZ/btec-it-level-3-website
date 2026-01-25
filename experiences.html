@@ -1,0 +1,126 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiences Page</title>
+  <link rel="stylesheet" href="styles2.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div id="clock"></div>
+
+<div class="theme-switcher">
+  <button data-theme-btn="blue">Blue</button>
+  <button data-theme-btn="dark">Dark</button>
+  <button data-theme-btn="light">Light</button>
+</div>
+
+<header class="hero-section">
+  <div class="logo">
+    <img src="assets/images/Earth.png" alt="JCC Logo">
+  </div>
+
+  <div class="hero-text">
+    <h1>Wide Range of Experiences</h1>
+    <p class="tagline"><strong>Every experience is a lesson that shapes the developer and the person I am becoming. 🌱</strong></p>
+  </div>
+</header>
+
+<nav class="navbar">
+    <a href="home.html">
+        <img src="assets/images/Home.png" class="nav-icon" alt="Home icon"> Home
+    </a>
+    <a href="skills.html">
+        <img src="assets/images/Skills.png" class="nav-icon" alt="Skills icon"> Skills
+    </a>
+    <a href="achievements.html">
+        <img src="assets/images/Achievements.png" class="nav-icon" alt="Achievements icon"> Achievements
+    </a>
+    <a href="experiences.html" class="active">
+        <img src="assets/images/Experiences.png" class="nav-icon" alt="Experiences icon"> Experiences
+    </a>
+    <a href="personal life.html">
+        <img src="assets/images/Personal Life.png" class="nav-icon" alt="User icon"> Personal Life
+    </a>
+    <a href="contact.html">
+        <img src="assets/images/Contact.png" class="nav-icon" alt="Contact icon"> Contact
+    </a>
+</nav>
+	
+<div class="font-resizer">
+  <button id="DecreaseFont">A-</button>
+  <button id="DefaultFont">A</button>
+  <button id="IncreaseFont">A+</button>
+</div>
+
+<main class="skills-container">
+  <section class="skill-card">
+    <h2>Pharmacy & Retail Marketing</h2>
+    <img src="assets/images/Pharmacy and Retail Marketing.jpg" alt="Multitasking">
+    <p>I craft and implement data-driven marketing strategies that directly support organizational objectives and deliver measurable growth. By leading dynamic teams, I cultivate innovation and accountability, ensuring every campaign contributes to long-term success. My focus on maintaining a consistent and compelling brand voice across all channels strengthens market presence and builds lasting trust with audiences.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Website Design & Digital Branding</h2>
+    <img src="assets/images/Website Design and Digital Branding.jpg" alt="Time Management">
+    <p>I combine technical web development skills with creative design to deliver impactful digital experiences. From building responsive, user-friendly websites with HTML, CSS, and JavaScript to producing brand-defining graphics with tools like Photoshop and Canva, I help businesses stand out in competitive markets. I also integrate SEO and digital marketing practices, enabling small businesses to expand their reach and maximize online visibility.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Technical Support & Cybersecurity Awareness</h2>
+    <img src="assets/images/Technical Support and Cybersecurity Awareness.png" alt="Critical Thinking">
+    <p>With practical experience in technical support at Joseph Chamberlain College, I specialize in resolving IT issues efficiently while supporting both staff and students. Beyond troubleshooting, I contribute to system setup, network maintenance, and process optimization to ensure operational stability. By promoting cybersecurity awareness and providing guidance on safe digital practices, I authorise users to navigate technology confidently and securely.</p>
+  </section>
+</main>
+<div class="footer">
+  <footer class="footer-content">
+    <div class="footer-left">
+      © 2025 Rahid Miah Portfolio. All rights reserved.
+    </div>
+
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@realistikplayz" target="_blank" rel="noopener noreferrer">
+		    <img src="assets/images/YouTube.png" alt="YouTube Icon">
+		</a>
+		<a href="https://www.instagram.com/jcsfcollege/?hl=en" target="_blank" rel="noopener noreferrer">
+			<img src="assets/images/Instagram.png" alt="Instagram Icon">
+		</a>
+		<a href="https://x.com/jcsfcollege" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X.png" alt="X Icon">
+		</a>
+		<a href="https://www.facebook.com/JCSFCollege/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/Facebook.png" alt="Facebook Icon">
+		</a>
+		<a href="https://www.linkedin.com/company/joseph-chamberlain-sixth-form-college/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/LinkedIn.jpg" alt="LinkedIn Icon">
+		</a>
+    </div>
+  </footer>
+<script>
+/* Alert Message */
+    document.addEventListener("DOMContentLoaded", () => {
+  alert("Welcome to the Experiences page!");
+});
+</script>
+<script>
+/* Background Colour Change */
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme") || "blue";
+  root.setAttribute("data-theme", savedTheme);
+
+  // Attach events to buttons
+  document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-theme-btn");
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    });
+  });
+</script>
+</div>
+
+</body>
+</html>

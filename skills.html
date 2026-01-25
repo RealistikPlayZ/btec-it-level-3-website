@@ -1,0 +1,127 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Page</title>
+  <link rel="stylesheet" href="styles2.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div id="clock"></div>
+
+<div class="theme-switcher">
+  <button data-theme-btn="blue">Blue</button>
+  <button data-theme-btn="dark">Dark</button>
+  <button data-theme-btn="light">Light</button>
+</div>
+
+<header class="hero-section">
+  <div class="logo">
+    <img src="assets/images/Earth.png" alt="JCC Logo">
+  </div>
+
+  <div class="hero-text">
+    <h1>Variety of Skills!</h1>
+    <p class="tagline"><strong>What skills have I brought to the table?</strong> 🤯</p>
+  </div>
+</header>
+
+<nav class="navbar">
+    <a href="home.html">
+        <img src="assets/images/Home.png" class="nav-icon" alt="Home icon"> Home
+    </a>
+    <a href="skills.html" class="active">
+        <img src="assets/images/Skills.png" class="nav-icon" alt="Skills icon"> Skills
+    </a>
+    <a href="achievements.html">
+        <img src="assets/images/Achievements.png" class="nav-icon" alt="Achievements icon"> Achievements
+    </a>
+    <a href="experiences.html">
+        <img src="assets/images/Experiences.png" class="nav-icon" alt="Experiences icon"> Experiences
+    </a>
+    <a href="personal life.html">
+        <img src="assets/images/Personal Life.png" class="nav-icon" alt="User icon"> Personal Life
+    </a>
+    <a href="contact.html">
+        <img src="assets/images/Contact.png" class="nav-icon" alt="Contact icon"> Contact
+    </a>
+</nav>
+	
+<div class="font-resizer">
+  <button id="DecreaseFont">A-</button>
+  <button id="DefaultFont">A</button>
+  <button id="IncreaseFont">A+</button>
+</div>
+
+<main class="skills-container">
+  <section class="skill-card">
+    <h2>Multitasking</h2>
+    <img src="assets/images/Multitasking.jpg" alt="Multitasking">
+    <p>I excel at managing several responsibilities at the same time while maintaining a high level of accuracy. Whether I'm handling incoming tasks, organizing information, or switching between different priorities, I stay focused and efficient. My ability to remain calm and structured in fast-paced situations allows me to deliver reliable results even when workload demands increase suddenly.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Time Management</h2>
+    <img src="assets/images/Time Management.jpg" alt="Time Management">
+    <p>I prioritize tasks effectively, ensuring both short-term and long-term goals are completed on schedule. I plan ahead, break down complex assignments, and stay disciplined with deadlines. By staying organized and balancing workloads, I maintain consistent productivity without compromising quality. This helps me stay dependable and prepared for any challenge that requires solid planning and execution.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Critical Thinking</h2>
+    <img src="assets/images/Critical Thinking.jpg" alt="Critical Thinking">
+    <p>I approach problems logically and strategically, taking time to understand the root of an issue before acting. I analyze information, consider different perspectives, and evaluate possible outcomes to make thoughtful decisions. Whether I’m solving technical challenges or planning personal goals, I consistently use reasoning and insight to reach effective, well-supported solutions.</p>
+  </section>
+</main>
+
+	<div class="footer">
+  <footer class="footer-content">
+    <div class="footer-left">
+      © 2025 Rahid Miah Portfolio. All rights reserved.
+    </div>
+
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@realistikplayz" target="_blank" rel="noopener noreferrer">
+		    <img src="assets/images/YouTube.png" alt="YouTube Icon">
+		</a>
+		<a href="https://www.instagram.com/jcsfcollege/?hl=en" target="_blank" rel="noopener noreferrer">
+			<img src="assets/images/Instagram.png" alt="Instagram Icon">
+		</a>
+		<a href="https://x.com/jcsfcollege" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X.png" alt="X Icon">
+		</a>
+		<a href="https://www.facebook.com/JCSFCollege/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/Facebook.png" alt="Facebook Icon">
+		</a>
+		<a href="https://www.linkedin.com/company/joseph-chamberlain-sixth-form-college/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/LinkedIn.jpg" alt="LinkedIn Icon">
+		</a>
+    </div>
+  </footer>
+<script>
+/* Alert Message */
+    document.addEventListener("DOMContentLoaded", () => {
+  alert("Welcome to the Skills page!");
+});
+</script>
+<script>
+/* Background Colour Change */
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme") || "blue";
+  root.setAttribute("data-theme", savedTheme);
+
+  // Attach events to buttons
+  document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-theme-btn");
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    });
+  });
+</script>
+</div>
+
+</body>
+</html>

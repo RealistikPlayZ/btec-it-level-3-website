@@ -1,0 +1,184 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Life Page</title>
+  <link rel="stylesheet" href="styles3.css"/>
+</head>
+<body>
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="assets/videos/Blue Galaxy Background.mp4" type="video/mp4">
+</video>
+<div id="bgMotionOverlay"></div>
+
+<div id="imgPopup" class="popup">
+  <img id="popupImage" src="#" alt="#">
+</div>
+
+<div id="clock"></div>
+
+<div class="theme-switcher">
+  <button data-theme-btn="blue">Galaxy Blue</button>
+  <button data-theme-btn="dark">Galaxy Purple</button>
+  <button data-theme-btn="light">Frutiger Aero</button>
+</div>
+
+<header class="hero-section">
+  <div class="logo">
+    <img src="assets/images/Earth.png" alt="Logo" />
+  </div>
+  <div class="hero-text">
+    <h1>Who Am I?</h1>
+    <p class="tagline"><strong>Get to Know Me: My Story, My Inspirations, My Success.</strong> 🌟</p>
+  </div>
+</header>
+
+<nav class="navbar">
+    <a href="home.html">
+        <img src="assets/images/Home.png" class="nav-icon" alt="Home icon"> Home
+    </a>
+    <a href="skills.html">
+        <img src="assets/images/Skills.png" class="nav-icon" alt="Skills icon"> Skills
+    </a>
+    <a href="achievements.html">
+        <img src="assets/images/Achievements.png" class="nav-icon" alt="Achievements icon"> Achievements
+    </a>
+    <a href="experiences.html">
+        <img src="assets/images/Experiences.png" class="nav-icon" alt="Experiences icon"> Experiences
+    </a>
+    <a href="personal life.html" class="active">
+        <img src="assets/images/Personal Life.png" class="nav-icon" alt="User icon"> Personal Life
+    </a>
+    <a href="contact.html">
+        <img src="assets/images/Contact.png" class="nav-icon" alt="Contact icon"> Contact
+    </a>
+</nav>
+	
+<div class="font-resizer">
+  <button id="DecreaseFont">A-</button>
+  <button id="DefaultFont">A</button>
+  <button id="IncreaseFont">A+</button>
+</div>
+
+<main class="skills-container">
+  <section class="skill-card">
+    <h2>Setup Showcase</h2>
+    <div class="slideshow">
+<img class="slideshow-img slide enlarge-img" src="assets/images/Working in Coding.png" alt="Gaming Setup Controller">
+<img class="slideshow-img slide enlarge-img" src="assets/images/Working in Coding Neon Lights Edition.png" alt="Gaming Setup Desktop">
+<img class="slideshow-img slide enlarge-img" src="assets/images/Playing Games.png" alt="Gaming Setup Controller">
+<img class="slideshow-img slide enlarge-img" src="assets/images/Playing Games Neon Lights Edition.png" alt="Gaming Setup Desktop">
+
+  <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+</div>
+    <p>I keep my setup sharp with a powerful desktop PC and my PS5, giving me the perfect balance between smooth console gaming and versatile PC performance. Whether I'm jumping into fast-paced matches or working on creative projects, my equipment lets me enjoy high-quality gameplay, multitasking, and livestreaming with ease.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>My Story</h2>
+    <img src="assets/images/Cartoon RealistikPlayZ 4.0.png" class="special-logo enlarge-img" alt="Profile" onclick="zoomImage(this)"/>
+    <p>Hey there! My name is Rahid Miah, and I tend to expand in the digital world, whether it’s gaming for hours or working efficiently. I’m a huge introvert but stay focused and get things done with high-quality results. I bring chill vibes, humor, and positive energy everywhere I go.</p> <p><br>I'm Bangladeshi, born and raised in the UK, fluent in English with intermediate knowledge of my ethnic language.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Content Creation</h2>
+    <div class="video-wrapper">
+      <video width="100%" height="300" controls
+			 poster="assets/images/Personal YouTube Thumbnail.jpg">
+		  <source src="assets/videos/How To Keep Your GobbleGums After Usage! Call Of Duty Black Ops 3 Zombies Guide.mp4" type="video/mp4"></video>
+    </div>
+    <p>I upload a variety of console gaming content on YouTube. Here, I stream live gameplay, chat with my viewers, and create entertaining videos. If you're a fan of gaming, feel free to subscribe and join the community, good vibes only!</p>
+  </section>
+</main>
+<div class="footer">
+  <footer class="footer-content">
+    <div class="footer-left">
+      © 2025 Rahid Miah Portfolio. All rights reserved.
+    </div>
+
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@realistikplayz" target="_blank" rel="noopener noreferrer">
+		    <img src="assets/images/YouTube.png" alt="YouTube Icon">
+		</a>
+		<a href="https://www.instagram.com/jcsfcollege/?hl=en" target="_blank" rel="noopener noreferrer">
+			<img src="assets/images/Instagram.png" alt="Instagram Icon">
+		</a>
+		<a href="https://x.com/jcsfcollege" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X.png" alt="X Icon">
+		</a>
+		<a href="https://www.facebook.com/JCSFCollege/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/Facebook.png" alt="Facebook Icon">
+		</a>
+		<a href="https://www.linkedin.com/company/joseph-chamberlain-sixth-form-college/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/LinkedIn.jpg" alt="LinkedIn Icon">
+		</a>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
+<div id="imgPopup" class="popup">
+  <span id="closePopup">&times;</span>
+  <img id="popupImage" src="">
+</div>
+<div id="imgPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+  <img id="popupImage" style="max-width:80%; max-height:80%; border:5px solid white; border-radius:10px;">
+</div>
+<script>
+/* Alert Message */
+    document.addEventListener("DOMContentLoaded", () => {
+  alert("Welcome to the Personal Life page!");
+});
+</script>
+<script>
+/* Background Colour + Video Change */
+const root = document.documentElement;
+const bgVideo = document.getElementById("bg-video");
+
+const themeVideos = {
+  blue: "assets/videos/Galaxy Blue.mp4",
+  dark: "assets/videos/Galaxy Purple 2.mp4",
+  light: "assets/videos/Frutiger Aero.mp4"
+};
+
+const savedTheme = localStorage.getItem("theme") || "blue";
+root.setAttribute("data-theme", savedTheme);
+bgVideo.src = themeVideos[savedTheme];
+bgVideo.load();
+bgVideo.play();
+
+document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const theme = btn.getAttribute("data-theme-btn");
+
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    bgVideo.src = themeVideos[theme];
+    bgVideo.load();
+    bgVideo.play();
+  });
+});
+</script>
+
+<script>
+const v = document.getElementById("bg-video");
+const start = 2;
+const end = 500;
+
+v.addEventListener("loadedmetadata", () => {
+    v.currentTime = start; 
+    v.playbackRate = 2;
+    v.play();
+});
+
+v.addEventListener("timeupdate", () => {
+    if (v.currentTime > end) {
+        v.currentTime = start;
+        v.play();
+    }
+});
+</script>
+</body>
+</html>

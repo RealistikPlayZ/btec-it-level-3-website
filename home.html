@@ -1,0 +1,166 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div id="clock"></div>
+
+<div class="theme-switcher">
+  <button data-theme-btn="blue">Blue</button>
+  <button data-theme-btn="dark">Dark</button>
+  <button data-theme-btn="light">Light</button>
+</div>
+
+<header class="hero-section">
+  <div class="logo">
+    <img src="assets/images/Earth.png" alt="Earth Logo">
+  </div>
+
+  <div class="hero-text">
+	<h1>Welcome to my website!</h1>
+    <p class="tagline"><strong>Explore. Learn. Grow.</strong> 🌍</p>
+  </div>
+</header>
+
+<nav class="navbar">
+    <a href="home.html" class="active">
+        <img src="assets/images/Home.png" class="nav-icon" alt="Home icon"> Home
+    </a>
+    <a href="skills.html">
+        <img src="assets/images/Skills.png" class="nav-icon" alt="Skills icon"> Skills
+    </a>
+    <a href="achievements.html">
+        <img src="assets/images/Achievements.png" class="nav-icon" alt="Achievements icon"> Achievements
+    </a>
+    <a href="experiences.html">
+        <img src="assets/images/Experiences.png" class="nav-icon" alt="Experiences icon"> Experiences
+    </a>
+    <a href="personal life.html">
+        <img src="assets/images/Personal Life.png" class="nav-icon" alt="User icon"> Personal Life
+    </a>
+    <a href="contact.html">
+        <img src="assets/images/Contact.png" class="nav-icon" alt="Contact icon"> Contact
+    </a>
+</nav>
+
+<div class="font-resizer">
+  <button id="DecreaseFont">A-</button>
+  <button id="DefaultFont">A</button>
+  <button id="IncreaseFont">A+</button>
+</div>
+
+  <main class="content-container">
+
+    <section class="card">
+      <img src="assets/images/JCC College.jpg" alt="Joseph Chamberlain College" class="JCC">
+      <p>
+		<strong>Joseph Chamberlain College (JCC)</strong> is a modern and forward-thinking educational institution, 
+        well-known for its commitment to excellence and innovation in learning. The college provides a diverse range of courses, 
+        offering opportunities for students to enhance their skills and prepare for both higher education and professional careers. 
+        With its striking glass-fronted architecture and welcoming environment, JCC fosters a strong sense of community and support. 
+        This inspiring atmosphere has played an important role in shaping my own development and has motivated me to strive for success 
+        both academically and professionally.
+      </p>
+    </section>
+
+    <section class="card intro">
+      <h2>Introduction – Rahid Miah</h2>
+      <p>
+		My name is <strong>Rahid Miah</strong>, and I am a dedicated and passionate individual with a strong interest in 
+        web development and technology. I enjoy creating websites that are not only visually appealing but also highly functional 
+        and easy to use. With a background in IT and coding, I have developed the ability to build responsive websites tailored 
+        to specific needs and audiences. I am particularly motivated by the challenge of problem-solving and enjoy finding 
+        innovative solutions that bring ideas to life. My long-term ambition is to continue growing my skills within the 
+        web development industry, contributing to professional projects and delivering work to a high standard of precision 
+        and creativity.
+      </p>
+    </section>
+
+    <section class="card video-section">
+      <video width="100%" height="250" controls 
+			 poster="assets/images/JCC Video Thumbnail.jpg">
+		  <source src="assets/videos/A Look Inside Joseph Chamberlain College.mp4" type="video/mp4"></video>
+      <p>
+        To provide a further insight into my experiences, I have included a video about <strong>Joseph Chamberlain College</strong>, 
+        highlighting its facilities and the opportunities it provides. This video offers additional context to my educational journey 
+        and demonstrates how the college has supported me in achieving both personal and academic goals.
+      </p>
+    </section>
+  </main>
+	<div class="footer">
+  <footer class="footer-content">
+    <div class="footer-left">
+      © 2025 Rahid Miah Portfolio. All rights reserved.
+    </div>
+
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@realistikplayz" target="_blank" rel="noopener noreferrer">
+		    <img src="assets/images/YouTube.png" alt="YouTube Icon">
+		</a>
+		<a href="https://www.instagram.com/jcsfcollege/?hl=en" target="_blank" rel="noopener noreferrer">
+			<img src="assets/images/Instagram.png" alt="Instagram Icon">
+		</a>
+		<a href="https://x.com/jcsfcollege" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X.png" alt="X Icon">
+		</a>
+		<a href="https://www.facebook.com/JCSFCollege/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/Facebook.png" alt="Facebook Icon">
+		</a>
+		<a href="https://www.linkedin.com/company/joseph-chamberlain-sixth-form-college/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/LinkedIn.jpg" alt="LinkedIn Icon">
+		</a>
+    </div>
+  </footer>
+	
+<div id="cookie-banner">
+    <div class="cookie-content">
+        <p>We use cookies to improve your experience and to analyse our website traffic. 
+        By continuing to browse, you agree to our use of cookies.</p>
+
+        <button id="accept-cookies">Accept</button>
+    </div>
+</div>
+
+<script>
+/* Alert Message */
+    document.addEventListener("DOMContentLoaded", () => {
+  alert("Welcome to the Home page!");
+});
+</script>
+<script>
+/* Background Colour Change */
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme") || "blue";
+  root.setAttribute("data-theme", savedTheme);
+
+  // Attach events to buttons
+  document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-theme-btn");
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    });
+  });
+</script>
+<script>
+/* Cookies Banner */
+// Show cookie banner only if not accepted before
+if (!localStorage.getItem("cookies-accepted")) {
+    document.getElementById("cookie-banner").style.display = "block";
+}
+
+document.getElementById("accept-cookies").addEventListener("click", () => {
+    localStorage.setItem("cookies-accepted", "true");
+    document.getElementById("cookie-banner").style.display = "none";
+});
+</script>
+</div>
+</body>
+</html>

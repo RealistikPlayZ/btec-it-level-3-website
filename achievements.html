@@ -1,0 +1,126 @@
+<!Doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements Page</title>
+  <link rel="stylesheet" href="styles2.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div id="clock"></div>
+
+<div class="theme-switcher">
+  <button data-theme-btn="blue">Blue</button>
+  <button data-theme-btn="dark">Dark</button>
+  <button data-theme-btn="light">Light</button>
+</div>
+
+<header class="hero-section">
+  <div class="logo">
+    <img src="assets/images/Earth.png" alt="JCC Logo">
+  </div>
+
+  <div class="hero-text">
+    <h1>Successes of Achievements</h1>
+    <p class="tagline"><strong>Each achievement reflects my journey towards becoming a skilled web developer. </strong> 🏫</p>
+  </div>
+</header>
+
+<nav class="navbar">
+    <a href="home.html">
+        <img src="assets/images/Home.png" class="nav-icon" alt="Home icon"> Home
+    </a>
+    <a href="skills.html">
+        <img src="assets/images/Skills.png" class="nav-icon" alt="Skills icon"> Skills
+    </a>
+    <a href="achievements.html" class="active">
+        <img src="assets/images/Achievements.png" class="nav-icon" alt="Achievements icon"> Achievements
+    </a>
+    <a href="experiences.html">
+        <img src="assets/images/Experiences.png" class="nav-icon" alt="Experiences icon"> Experiences
+    </a>
+    <a href="personal life.html">
+        <img src="assets/images/Personal Life.png" class="nav-icon" alt="User icon"> Personal Life
+    </a>
+    <a href="contact.html">
+        <img src="assets/images/Contact.png" class="nav-icon" alt="Contact icon"> Contact
+    </a>
+</nav>
+	
+<div class="font-resizer">
+  <button id="DecreaseFont">A-</button>
+  <button id="DefaultFont">A</button>
+  <button id="IncreaseFont">A+</button>
+</div>
+
+<main class="skills-container">
+  <section class="skill-card">
+    <h2>User Experience</h2>
+    <img src="assets/images/User Experience.jpg" alt="Multitasking">
+    <p>My experience in User Experience focuses on creating clean, intuitive, and visually engaging interfaces that make navigation effortless. I have designed and launched multiple user-friendly websites that prioritize accessibility, clarity, and responsiveness. By conducting usability checks, refining layouts, and optimizing interactive elements, I consistently enhance overall user satisfaction and engagement across different platforms.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Collaboration</h2>
+    <img src="assets/images/Collaboration.jpg" alt="Time Management">
+    <p>I excel in team-based environments where clear communication and shared goals are essential. I have collaborated on and led several development projects, working closely with designers, developers, and clients to deliver polished, well-structured solutions. One notable achievement includes helping develop a full client portal that improved workflow efficiency, streamlined communication, and strengthened project coordination across the team.</p>
+  </section>
+
+  <section class="skill-card">
+    <h2>Performance Optimization</h2>
+    <img src="assets/images/Performance Optimization.jpg" alt="Critical Thinking">
+    <p>Performance optimization is a key strength of mine, supported by hands-on experience improving loading speeds, refining code efficiency, and enhancing overall site responsiveness. I have optimized website assets, implemented best SEO practices, and reduced unnecessary scripts, resulting in faster load times, improved rankings, and increased user engagement. These improvements have directly contributed to higher traffic and better long-term performance for clients’ websites.</p>
+  </section>
+</main>
+<div class="footer">
+  <footer class="footer-content">
+    <div class="footer-left">
+      © 2025 Rahid Miah Portfolio. All rights reserved.
+    </div>
+
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@realistikplayz" target="_blank" rel="noopener noreferrer">
+		    <img src="assets/images/YouTube.png" alt="YouTube Icon">
+		</a>
+		<a href="https://www.instagram.com/jcsfcollege/?hl=en" target="_blank" rel="noopener noreferrer">
+			<img src="assets/images/Instagram.png" alt="Instagram Icon">
+		</a>
+		<a href="https://x.com/jcsfcollege" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X.png" alt="X Icon">
+		</a>
+		<a href="https://www.facebook.com/JCSFCollege/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/Facebook.png" alt="Facebook Icon">
+		</a>
+		<a href="https://www.linkedin.com/company/joseph-chamberlain-sixth-form-college/" target="_blank" rel="noopener noreferrer">	
+            <img src="assets/images/LinkedIn.jpg" alt="LinkedIn Icon">
+		</a>
+    </div>
+  </footer>
+<script>
+/* Alert Message */
+    document.addEventListener("DOMContentLoaded", () => {
+  alert("Welcome to the Achievements page!");
+});
+</script>
+<script>
+/* Background Colour Change */
+  const root = document.documentElement;
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme") || "blue";
+  root.setAttribute("data-theme", savedTheme);
+
+  // Attach events to buttons
+  document.querySelectorAll("[data-theme-btn]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const theme = btn.getAttribute("data-theme-btn");
+      root.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    });
+  });
+</script>
+</div>
+
+</body>
+</html>

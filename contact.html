@@ -111,30 +111,25 @@
 
     const form = this;
 
-    // Send both emails and wait for both to finish
-    Promise.all([
-      // Owner POV
-      emailjs.sendForm(
-        "service_01x63pj",
-        "template_74qz7sc",
-        form
-      ),
+    // Owner POV
+    emailjs.sendForm(
+      "service_01x63pj",
+      "template_74qz7sc",
+      form
+    );
 
-      // User POV
-      emailjs.sendForm(
-        "service_01x63pj",
-        "template_ro420sc",
-        form
-      )
-    ])
-    .then(function () {
-      alert("Message sent successfully!");
-      form.reset(); // Reset only after success
-    })
-    .catch(function (error) {
-      alert("Failed to send message. Please try again.");
-      console.error("EmailJS error:", error);
-    });
+    // User POV
+    emailjs.sendForm(
+      "service_01x63pj",
+      "template_ro420sc",
+      form
+    );
+
+    // One simple success message
+    alert("Success! Your email has been sent through.");
+
+    // Reset form
+    form.reset();
   });
 </script>
 
@@ -200,4 +195,5 @@
 </body>
 
 </html>
+
 

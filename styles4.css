@@ -386,24 +386,58 @@ body {
 
 /* Tablets */
 @media (max-width: 900px) {
+
+  /* Hero */
+  .hero-section {
+    padding: 2rem 2rem;
+  }
+
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .logo img {
     width: 120px;
   }
+
+  /* Contact layout */
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 1.5rem;
+  }
+
+  /* Map */
+  #map-container {
+    height: 420px;
+  }
+
+  /* Controls */
+  .font-resizer button,
+  .theme-switcher button {
+    min-width: 44px;
+  }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
+
+  /* Hero */
   .hero-section {
-    padding: 1.2rem;
-    text-align: center;
+    padding: 1.3rem;
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .tagline {
+    font-size: 1.05rem;
   }
 
   .logo {
@@ -412,21 +446,105 @@ body {
     margin-bottom: 1rem;
   }
 
+  .logo img {
+    width: 95px;
+  }
+
+  /* Navbar */
   .navbar {
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .navbar a {
-    padding: 0.5rem 1rem;
+    width: 90%;
+    justify-content: center;
+    padding: 0.7rem;
     font-size: 0.9rem;
   }
 
-  .content-container {
+  /* Contact Layout */
+  .contact-section {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 1.2rem;
+    gap: 1.5rem;
   }
 
+  .contact-left,
+  .contact-right {
+    padding: 1.2rem;
+    border-radius: 10px;
+  }
+
+  /* Contact text */
+  .contact-icons p {
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Form */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 0.85rem;
+  }
+
+  .contact-form textarea {
+    min-height: 200px;
+  }
+
+  .send-btn {
+    width: 100%;
+    margin-left: 0;
+    font-size: 1.05rem;
+  }
+
+  /* Map */
+  #map-container {
+    height: 300px;
+  }
+
+  .location-title {
+    font-size: 22px;
+  }
+
+  /* Theme switcher */
+  .theme-switcher {
+    position: static;
+    justify-content: center;
+    margin: 0.6rem auto;
+  }
+
+  /* Font Resizer */
+  .font-resizer {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .font-resizer button,
+  .theme-switcher button {
+    font-size: 16px;
+    padding: 8px 12px;
+    min-width: 48px;
+  }
+
+  /* Clock */
   #clock {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  /* Footer */
+  .footer-right img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Cookie Banner */
+  .cookie-content {
+    justify-content: center;
+    text-align: center;
   }
 }
